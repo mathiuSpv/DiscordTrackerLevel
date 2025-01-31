@@ -12,6 +12,7 @@ GUILD_ID = os.getenv('DISCORD_GUILD_ID')
 
 # Set up Intents
 intents = discord.Intents.default()
+intents.message_content = True # Enable message events
 intents.members = True  # Enable member-related events
 intents.voice_states = True  # Enable voice state events
 bot = Bot(command_prefix="!", intents=intents, application_id=APPLICATION_ID)
